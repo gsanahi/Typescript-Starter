@@ -105,14 +105,29 @@ function clockUpdate() {
     setTime(date);
     setDate(date);
     setTramo(date);
+    setBackgroundImage(date);
 }
 
-// function fondoDePantalla(date: Date): void {
-//     const hora = date.getHours().toLocaleString('en-US', { minimumIntegerDigits: 2 });
-//     if(hora> 9 && hora < 6) {
-        
-//     }
-// }
+function setBackgroundImage(date: Date): void {
+    const hora = date.getHours();
+    const amanecer = 'url("../assets/bcnAmanece.jpg")'
+    const dia = 'url("../assets/bcnday.jpg")'
+    const atardecer = 'url("../assets/hotel-g239caf418_1920.jpg")'
+    const noche = 'url("../assets/bcnNight.jpg")'
+
+    if(hora >= 20 || hora < 6) {
+        document.body.style.backgroundImage = noche
+    }
+    if(hora >= 6 && hora < 7) {
+        document.body.style.backgroundImage = amanecer
+    }
+    if(hora >= 7 && hora < 17) {
+        document.body.style.backgroundImage = dia
+    }
+    if(hora >= 17 && hora < 20) {
+        document.body.style.backgroundImage = atardecer
+    }
+ }
 
 
 M.AutoInit();
