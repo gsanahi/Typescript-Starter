@@ -1,13 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-	
-    <title>Typescript Starter</title>
-	  <meta name="description" content="Typescript Starter">
-	  <meta name="author" content="https://github.com/nea">
-  </head>
-  <body>
-	  <script src="greeter.js"></script>
-  </body>
+<html>
+    <head>
+      <title>
+        Reloj de luz
+      </title>
+        
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="./styles/reloj.css">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper light blue">
+                <a href="#" class="brand-logo center"> Reloj <i class="material-icons">add_alarm</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down" class="card-panel teal lighten-2">
+                    <li><a href="./index.html">Personas Raras</a></li>
+                    <li><a href="./ejercicios.html">Ejercicios</a></li>
+                    <li><a href="reloj.html"><i class="material-icons">refresh</i></a></li>             
+                </ul>
+            </div>
+        </nav>   
+
+        <!-- Container -->
+        <div class="container"> 
+            <h3 class="white-text">A que hora podemos poner el lavarropas?</h3>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card z-depth-3 card-top">
+                        <div class="card-content center">
+                            <h1><span id="hora"></span></h1>
+                            <h5 class="grey-text"><span id="date"></span></h5> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div id="tramo-card" class="card z-depth-3 orange lighten-2 card-top">
+                        <div class="card-content center">
+                            <h1><span id="tramo"></span></h1>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="col s12">
+                    <div class="card z-depth-3 popout blue-grey darken-1">
+                        <div class="card-tabs">
+                            <ul id="tabs-franjas" class="tabs tabs-fixed-width">
+                              <li class="tab green lighten-2"><a href="#valle" class="black-text">Valle</a></li>
+                              <li class="tab orange lighten-2"><a href="#llano" class="black-text">Llano</a></li>
+                              <li class="tab red lighten-2"><a href="#punta" class="black-text">Punta</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="valle" class="card-content green lighten-2">
+                            <p>
+                                El periodo de hora valle tiene un precio reducido y comprende 
+                            las horas nocturnas (de las 24.00 a las 8.00 horas), y todas las horas de sábados, domingos y festivos.
+                            </p>
+                            
+                        </div>
+                        <div id="llano" class="card-content orange lighten-2">
+                            <p>
+                               El periodo de hora llana tiene un precio menos caro, de las 8.00 a las 10.00 horas, 
+                            de las 14.00 a las 18.00 horas y de las 22.00 a las 24.00 horas. 
+                            </p>
+                        </div>
+                        <div id="punta" class="card-content red lighten-2">
+                            <p>
+                                El periodo de hora punta tiene el precio más elevado, de las 10.00 a las 14.00 horas y 
+                            de las 18.00 a las 22.00 horas, de lunes a viernes no festivos.
+                            </p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>  
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="./reloj.js"></script>
+    </body> 
 </html>

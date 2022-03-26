@@ -1,0 +1,22 @@
+body {
+    background-image: url("../assets/hotel-g239caf418_1920.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    margin: 1.5rem 0.5rem;
+}
+
+.mas-info {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+}
+
+.card-top {
+    height:230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
